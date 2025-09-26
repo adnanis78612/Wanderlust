@@ -4,7 +4,7 @@ Wanderlust 🏡
 
 A full-stack Airbnb clone built with Node.js, Express, and EJS. Users can explore, list ,delete with authentication, image uploads, and maps.
 
-🔗 Live Demo : https://wanderlust-n4jk.onrender.com/listings
+🔗 Live Demo : https://wanderlust-x2v9.onrender.com/listings
 
 🌟 Features
 
