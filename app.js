@@ -63,15 +63,19 @@ const sessionOptions={
   resave: false,
   saveUninitialized: true,
   cookie: {
-    expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+    expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
     maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
-  }
+}
 };
 
-// app.get("/", (req, res) => {
-//   res.send("Hi, I am root");
-// });
+if (process.env.NODE_ENV === "production") {
+  sessionOptions.cookie.secure = true;
+}
+
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 app.use(session(sessionOptions));
 app.use(flash());
