@@ -69,13 +69,10 @@ const sessionOptions={
   },
 };
 
-if (process.env.NODE_ENV === "production") {
-  sessionOptions.cookie.secure = true;
-}
 
-app.get("/", (req, res) => {
-  res.redirect("/listings");
-});
+// app.get("/", (req, res) => {
+//   res.redirect("/listings");
+// });
 
 app.use(session(sessionOptions));
 app.use(flash());
